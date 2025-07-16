@@ -1,89 +1,212 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.10.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.10.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.10.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.10.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.10.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.10.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.10.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.10.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.10.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.10.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Johnson - Digital Creator & Designer</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <div class="logo">Alex Johnson</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="admin-btn" onclick="showLogin()">Admin</button>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  </nav>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <!-- Home Section -->
+  <section id="home" class="section home">
+    <div class="container home-content">
+      <div class="profile-image">AJ</div>
+      <h1>Hi, I'm Alex Johnson</h1>
+      <p class="subtitle">Digital Creator & Designer</p>
+      <p class="description">Welcome to my space on the web. Here I share thoughts, insights, and my journey in design and content creation.</p>
+      <a href="#blog" class="cta-button">Read My Blog</a>
+    </div>
+  </section>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+  <!-- Blog Section -->
+  <section id="blog" class="section blog">
+    <div class="container">
+      <h2>Latest Articles</h2>
+      <div id="blogGrid" class="blog-grid"></div>
+    </div>
+  </section>
+
+  <!-- Author Info Template (Hidden) -->
+  <template id="authorTemplate">
+    <div class="author-info">
+      <img src="" alt="Author Image" class="author-img" />
+      <div>
+        <p class="author-name"></p>
+        <a class="author-link" href="#" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </template>
+
+  <!-- Article View Modal -->
+  <div id="articleModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="articleTitle"></h3>
+        <button class="close-btn" onclick="closeModal('articleModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="articleDate" class="article-date"></div>
+        <div id="articleContent" class="article-content"></div>
+        <div id="articleAuthor" class="author-info"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Modal -->
+  <div id="adminModal" class="modal">
+    <div class="admin-panel">
+      <div class="admin-header">
+        <h3>Admin Panel</h3>
+        <button class="close-btn" onclick="closeModal('adminModal')">&times;</button>
+      </div>
+      <div class="admin-content">
+        <div class="admin-tabs">
+          <button class="tab-btn active" onclick="showTab('articles')">Articles</button>
+          <button class="tab-btn" onclick="showTab('stats')">Stats</button>
+        </div>
+
+        <div id="articles" class="tab-content active">
+          <form id="articleForm">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" name="title" required />
+            </div>
+            <div class="form-group">
+              <label for="excerpt">Excerpt</label>
+              <input type="text" name="excerpt" required />
+            </div>
+            <div class="form-group">
+              <label for="content">Content (HTML supported)</label>
+              <textarea name="content" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="tags">Tags (comma separated)</label>
+              <input type="text" name="tags" />
+            </div>
+            <div class="form-group">
+              <label for="authorImage">Author Image URL</label>
+              <input type="text" name="authorImage" />
+            </div>
+            <div class="form-group">
+              <label for="authorName">Author Name</label>
+              <input type="text" name="authorName" />
+            </div>
+            <div class="form-group">
+              <label for="authorLinkedIn">LinkedIn Profile URL</label>
+              <input type="text" name="authorLinkedIn" />
+            </div>
+            <button type="submit" class="btn btn-primary">Publish</button>
+            <button type="button" class="btn btn-secondary" onclick="closeAdminAndRefresh()">Close Admin Panel</button>
+            <button type="button" onclick="logout()" class="btn btn-secondary">Logout</button>
+          </form>
+
+          <div class="articles-list" id="articlesList"></div>
+        </div>
+
+        <div id="stats" class="tab-content">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number" id="totalArticles">0</div>
+              <div class="stat-label">Total Articles</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="recentArticles">0</div>
+              <div class="stat-label">Articles This Month</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="totalViews">0</div>
+              <div class="stat-label">Total Views</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Login</h3>
+        <button class="close-btn" onclick="closeModal('loginModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Edit Article</h3>
+        <button class="close-btn" onclick="closeModal('editModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="editForm">
+          <input type="hidden" name="id" id="editId" />
+          <div class="form-group">
+            <label for="editTitle">Title</label>
+            <input type="text" name="title" id="editTitle" required />
+          </div>
+          <div class="form-group">
+            <label for="editExcerpt">Excerpt</label>
+            <input type="text" name="excerpt" id="editExcerpt" required />
+          </div>
+          <div class="form-group">
+            <label for="editContent">Content (HTML supported)</label>
+            <textarea name="content" id="editContent" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="editTags">Tags</label>
+            <input type="text" name="tags" id="editTags" />
+          </div>
+          <div class="form-group">
+            <label for="editAuthorImage">Author Image URL</label>
+            <input type="text" name="authorImage" id="editAuthorImage" />
+          </div>
+          <div class="form-group">
+            <label for="editAuthorName">Author Name</label>
+            <input type="text" name="authorName" id="editAuthorName" />
+          </div>
+          <div class="form-group">
+            <label for="editAuthorLinkedIn">LinkedIn Profile URL</label>
+            <input type="text" name="authorLinkedIn" id="editAuthorLinkedIn" />
+          </div>
+          <button type="submit" class="btn btn-primary">Update</button>
+          <button type="button" class="btn btn-secondary" onclick="closeModal('editModal')">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="firebase/firebase-config.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
 </html>
