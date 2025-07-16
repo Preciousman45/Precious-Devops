@@ -71,7 +71,7 @@ export function populateAdminArticles(articles) {
 }
 
 // Delete article function (imports from app.js or implement here if needed)
-import { deleteDoc, doc } from "firebase/firestore";
+import { deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 import { db } from "../../firebase/firebase-config.js";
 
 async function deleteArticle(id) {

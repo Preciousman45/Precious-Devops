@@ -5,7 +5,7 @@ import {
   doc,
   getDoc,
   updateDoc,
-} from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
+} from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 
 const blogGrid = document.getElementById('blogGrid');
 const articleModal = document.getElementById('articleModal');

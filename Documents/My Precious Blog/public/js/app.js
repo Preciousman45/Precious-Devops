@@ -10,7 +10,7 @@ import {
   orderBy,
   serverTimestamp,
   where
-} from "firebase/firestore";
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 const blogGrid = document.getElementById("blogGrid");
 const articleForm = document.getElementById("articleForm");
