@@ -1,0 +1,13 @@
+{
+    "name": "admin/library-management-system",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "cloudinary/cloudinary_php": "^3.1",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
